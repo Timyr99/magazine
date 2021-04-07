@@ -1,6 +1,7 @@
  @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 .container{
   max-width: 1200px;
@@ -12,7 +13,7 @@
   &__inner{
     display: flex;
     justify-content: space-between;
-    padding: 0 75px;
+    
     align-items: center;
   }
   &__item{
@@ -112,7 +113,7 @@
     margin-left: 60px;
   }
 
-}
+} 
 .footer{
   margin-bottom: 45px;
   &-top{
@@ -208,5 +209,92 @@
   }
 }
 
+.top-slider{
+  background-color: rgb(252, 215, 182);
+  margin-top: 45px;
+    background-image: url('../images/icons/bgc.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-position-x: 85%;
+ 
+
+  
+
+  &__inner{
+    padding-top: 225px;
+    
+  }
+  &__content{
+    display: flex !important ;
+    justify-content: space-between;
+    margin-bottom: 200px;
+  }
+
+  &__title{
+  @extend %rubik-500;
+  font-size: 72px;
+  margin-bottom: 45px;
+  color: #243f4d;
+  }
+  &__text{
+    @extend %rubik-400;
+    max-width: 380px;
+    font-size: 18px;  
+    color: #436372;
+    margin-bottom: 70px;  
+  }
+  &__link{
+    color: #fff;
+    background-color: #a3bbc8;
+    font-size: 15px;
+    @extend %rubik-500;
+    padding:25px 100px 25px 25px;
+    position: relative;
+  }
+  &__link::after{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 10px;
+    background-image: url('../images/icons/arrow.svg');
+    left: 80%;
+    top: 44%;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    li{
+      button{
+        padding: 0;
+        background-color: #fde3cc;
+        width: 30px;
+        height: 30px;
+        color: #667983;
+        border: none;
+        border-radius:50%;
+        margin-left: 20px;
+            @extend %rubik-500;
+            font-size: 11px;
+
+      }
+      &.slick-active{
+        color: #243f4d;
+        button{
+          color: #243f4d;
+          background-color: #fff;
+              @extend %rubik-500;
+
+        }
+      }
+    }
+  }
+}
+.slider{
+  height: 100px;
+}
 
 @import 'media';
+
+
